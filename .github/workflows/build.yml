@@ -21,11 +21,14 @@ jobs:
           echo "DEVKITPRO=/opt/devkitpro" >> $GITHUB_ENV
           echo "DEVKITARM=/opt/devkitpro/devkitARM" >> $GITHUB_ENV
 
-      - name: Check files
+      - name: Install Nintendo DS libraries
         run: |
-          echo "DEVKITPRO=$DEVKITPRO"
-          ls -la
-          ls -la /opt/devkitpro
+          dkp-pacman -Syu --noconfirm
+          dkp-pacman -S --needed --noconfirm nds-dev
+
+      - name: Check libnds
+        run: |
+          ls -l /opt/devkitpro/libnds/lib/libnds9.a
 
       - name: Build Nintendo DS ROM
         run: make
