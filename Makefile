@@ -9,12 +9,11 @@ DEVKITARM ?= $(DEVKITPRO)/devkitARM
 
 ARCH := -march=armv5te -mtune=arm946e-s
 
-CFLAGS := -Wall -O2 -ffast-math $(ARCH) -DARM9
+CFLAGS := -g -Wall -O2 -ffast-math $(ARCH) -DARM9
 CXXFLAGS := $(CFLAGS) -fno-rtti -fno-exceptions
-ASFLAGS := $(ARCH)
+ASFLAGS := -g $(ARCH)
 
-# Ne pas transmettre ARCH directement à ld
-LDFLAGS := -specs=ds_arm9.specs
+LDFLAGS = -specs=ds_arm9.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
 
 LIBS := -lnds9
 LIBDIRS := $(LIBNDS)
@@ -28,7 +27,11 @@ export VPATH := $(foreach dir,$(SOURCES),$(CURDIR)/$(dir))
 export DEPSDIR := $(CURDIR)/$(BUILD)
 
 CFILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.c)))
+
 export OFILES := $(CFILES:.c=.o)
+
+# CORRECTION IMPORTANTE
+export LD := $(CC)
 
 export INCLUDE := $(foreach dir,$(INCLUDES),-I$(CURDIR)/$(dir)) -I$(LIBNDS)/include
 export LIBPATHS := $(foreach dir,$(LIBDIRS),-L$(dir)/lib)
