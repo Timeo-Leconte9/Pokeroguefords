@@ -6,6 +6,7 @@ INCLUDES := include
 
 DEVKITPRO ?= /opt/devkitpro
 DEVKITARM ?= $(DEVKITPRO)/devkitARM
+LIBNDS ?= $(DEVKITPRO)/libnds
 
 ARCH := -march=armv5te -mtune=arm946e-s
 
