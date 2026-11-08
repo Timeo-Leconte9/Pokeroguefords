@@ -1,0 +1,39 @@
+
+name: Build PokeRogueDS
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: devkitpro/devkitarm:latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure devkitPro
+        run: |
+          echo "DEVKITPRO=/opt/devkitpro" >> $GITHUB_ENV
+          echo "DEVKITARM=/opt/devkitpro/devkitARM" >> $GITHUB_ENV
+
+      - name: Check files
+        run: |
+          echo "DEVKITPRO=$DEVKITPRO"
+          ls -la
+          ls -la /opt/devkitpro
+
+      - name: Build Nintendo DS ROM
+        run: make
+
+      - name: Upload NDS
+        uses: actions/upload-artifact@v4
+        with:
+          name: PokeRogueDS-nds
+          path: "**/*.nds"
+          if-no-files-found: error
+          
