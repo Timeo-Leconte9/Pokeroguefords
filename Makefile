@@ -50,6 +50,9 @@ clean:
 
 else
 
+CFLAGS += $(INCLUDE)
+CXXFLAGS += $(INCLUDE)
+
 DEPENDS := $(OFILES:.o=.d)
 
 $(OUTPUT).nds: $(OUTPUT).elf
