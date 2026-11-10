@@ -629,17 +629,17 @@ static void generate(int d, int back, int shiny, u16 *dst)
     pal[R_NONE] = 0;
     pal[R_BASE] = base;
     pal[R_ACC] = acc;
-    pal[R_BELLY] = back ? gfx_darken(base, 30) : gfx_mix(base, rgb(250, 238, 200), SP->t1 == 0 ? 200 : 150);
+    pal[R_BELLY] = back ? gfx_darken(base, 30) : gfx_mix(base, makeRgb(250, 238, 200), SP->t1 == 0 ? 200 : 150);
     pal[R_WING] = gfx_lighten(SP->t2 != NO_TYPE ? acc : base, 70);
     pal[R_DARK] = gfx_darken(base, 100);
-    pal[R_FLAME] = rgb(240, 110, 30);
-    pal[R_FLAMEY] = rgb(255, 220, 70);
-    pal[R_WHITE] = rgb(240, 248, 255);
-    if (SP->t1 == 2 || SP->t1 == 5) pal[R_FLAME] = rgb(120, 190, 255);
-    if (SP->t1 == 6) pal[R_FLAME] = rgb(210, 40, 40);
-    if (SP->t1 == 4) pal[R_FLAMEY] = rgb(250, 220, 90);
-    if (SP->t1 == 1) pal[R_FLAMEY] = rgb(255, 230, 90);
-    if (SP->t1 == 10) pal[R_FLAMEY] = rgb(250, 160, 200);
+    pal[R_FLAME] = makeRgb(240, 110, 30);
+    pal[R_FLAMEY] = makeRgb(255, 220, 70);
+    pal[R_WHITE] = makeRgb(240, 248, 255);
+    if (SP->t1 == 2 || SP->t1 == 5) pal[R_FLAME] = makeRgb(120, 190, 255);
+    if (SP->t1 == 6) pal[R_FLAME] = makeRgb(210, 40, 40);
+    if (SP->t1 == 4) pal[R_FLAMEY] = makeRgb(250, 220, 90);
+    if (SP->t1 == 1) pal[R_FLAMEY] = makeRgb(255, 230, 90);
+    if (SP->t1 == 10) pal[R_FLAMEY] = makeRgb(250, 160, 200);
 
     switch (SP->arch) {
     case 'B': arch_biped(0, 0); break;
