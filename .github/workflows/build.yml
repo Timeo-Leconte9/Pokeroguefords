@@ -1,0 +1,33 @@
+
+name: Build PokeRogueDS
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: devkitpro/devkitarm:latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build project
+        run: |
+          make
+
+      - name: Upload NDS
+        uses: actions/upload-artifact@v4
+        with:
+          name: PokeRogueDS
+          path: |
+            *.nds
+            build/*.nds
+            
