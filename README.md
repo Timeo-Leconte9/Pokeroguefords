@@ -1,15 +1,26 @@
 # Précisions :
 -Ce n' est pas les mêmes textures que l' original
+
 -Il n' y a pas encore de système pour sauvegarder 
+
 -Les sprites sont statiques et sont fait à partir des catégories de formes des pokémons
+
 -Il y a toute la 1ere génération (même les évolutions peuvent être prises en starter)
+
 -L' équilibrage est totalement inexistant, donc j' ai testé Mewtwo avec le max de reste (il y a quand même une limite), c' est plutôt fort
+
 -Le jeu tourne très bien, ça c' est sûr 
+
 -Qu' un bug trouvé, lors de la sélection du prochain biome l' écran devient noir
+
 -Il y a les mégas, le dynamax et la téra, mais on peut l' utiliser a chaque combat
+
 -Aucun système de gacha pour l' instant, ni d' achievement, ni de challenge, ni de fusion, juste du classique jusqu'au palier 200
+
 -Ca m' étonne que t' as lu jusqu' ici
+
 -Le début est très facile
+
 -Ca n' est pas en pleine écran
 
 Bref, si vous ne voulez pas que l' ia se développe et commence a faire des jeux pareils, n' y jouez pas. Merci !
