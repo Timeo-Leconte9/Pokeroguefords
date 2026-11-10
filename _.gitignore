@@ -1,0 +1,33 @@
+
+# Build files
+build/
+*.o
+*.elf
+*.nds
+*.map
+*.d
+
+# DevkitPro
+*.3dsx
+*.cia
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+
+# Archives
+*.zip
+*.rar
+*.7z
