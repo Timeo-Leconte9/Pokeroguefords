@@ -1,7 +1,7 @@
 # Précisions :
 -Ce n' est pas les mêmes textures que l' original
 
--Il n' y a pas encore de système pour sauvegarder 
+-Il n' y a pas encore de système pour quitter mais !!! ATTENTION, CA SAVE AUTOMATIQUE QUAND VOUS QUITTEZ !!!
 
 -Les sprites sont statiques et sont fait à partir des catégories de formes des pokémons
 
