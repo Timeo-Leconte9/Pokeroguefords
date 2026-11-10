@@ -476,7 +476,7 @@ static void decorate(int t, int strong)
 }
 
 /* ------------------------------------------------------------ composition */
-static u16 rgb(int r, int g, int b) { return COL(r, g, b); }
+static u16 makeRgb(int r, int g, int b) { return COL(r, g, b); }
 
 static void compose(u16 *pal, int back)
 {
