@@ -1,6 +1,7 @@
 /* game.c : boucle de partie (vagues, biomes, boss, récompenses, boutique, sauvegarde, sélection des starters) */
 #include "game.h"
 #include <time.h>
+#include <fat.h>
 
 Run run;
 int uiScreen;
