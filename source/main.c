@@ -1,4 +1,3 @@
-
 /* PokéRogue DS - point d'entrée */
 #include "game.h"
 #include <fat.h>
