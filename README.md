@@ -1,4 +1,4 @@
-# PokéRogue DS (version perso, usage personnel)
+# PokéRogue DS (inspiration nes je pense)
 
 Roguelike inspiré de PokéRogue pour Nintendo DS / 2DS / 3DS (mode DS), en C avec devkitARM + libnds.
 
